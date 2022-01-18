@@ -7,7 +7,7 @@ export default function KommuneKomponent({ setInteractive }) {
     return (
         <div className="container">
             <h2 className='header'>Danmarks Kommuner</h2>
-            <p className='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos labore, vero veniam modi expedita sed corrupti maiores repellat officia aliquam ad officiis numquam, necessitatibus recusandae neque illo error saepe enim.</p>
+            <p className='description'>Hvis du savner en fed liste over Danmarks mange kommuner, så look no further! Tryk på knappen herunder, og forbered dig på at blive imponeret.</p>
             <button className='btn' onClick={() => setInteractive(true)}>Se Danmarks Kommuner</button>
         </div>
     )

@@ -3,9 +3,18 @@
 }
 
 table {
-    margin-top: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;  
     width: 100%;
     border-collapse: collapse;
+}
+
+th {
+    background-color: #00a050;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor:pointer;
 }
 
 td, th {
@@ -14,6 +23,10 @@ td, th {
     padding: 8px;
 }
 
-tbody:nth-child(1) {
+td {
+    font-size: 0.8em;
+}
+
+tbody tr:nth-child(even) {
     background-color: #dddddd;
 }
