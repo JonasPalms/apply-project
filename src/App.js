@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+
+// Components
+import KommuneIntro from './components/KommuneIntro'
+import KommuneActive from './components/KommuneActive';
+
+
+// styles
 import './App.css';
 
 function App() {
+
+  const [interactive, setInteractive] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!interactive && <KommuneIntro setInteractive={setInteractive} />}
+
+      {interactive && <KommuneActive setInteractive={setInteractive} />}
+
     </div>
   );
+
 }
+
+
 
 export default App;

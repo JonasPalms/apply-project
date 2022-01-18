@@ -1,0 +1,19 @@
+.container {
+    width: 1200px; 
+}
+
+table {
+    margin-top: 20px; 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody:nth-child(1) {
+    background-color: #dddddd;
+}
