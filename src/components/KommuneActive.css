@@ -30,3 +30,8 @@ td {
 tbody tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+form input {
+    font-size: 1em; 
+    padding: 4px; 
+}
