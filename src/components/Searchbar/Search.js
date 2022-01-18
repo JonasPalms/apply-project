@@ -10,7 +10,7 @@ export default function Search({ getQuery }) {
     const onChange = (q) => {
 
         setTerm(q)
-        getQuery(term)
+        getQuery(q)
     }
 
     return (

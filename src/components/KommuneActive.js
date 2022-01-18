@@ -20,7 +20,10 @@ export default function KommuneActive({ setInteractive }) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch(`https://api.dataforsyningen.dk/kommuner${query}`)
+
+
+            const res = await fetch(
+                `https://api.dataforsyningen.dk/kommuner${query}`)
             const result = await res.json()
 
             setItems(result)
