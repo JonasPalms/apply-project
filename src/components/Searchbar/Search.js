@@ -1,4 +1,4 @@
-import './Search.css'
+
 
 import { useState } from "react"
 
@@ -7,22 +7,22 @@ export default function Search({ getQuery }) {
 
     const [term, setTerm] = useState("")
 
-    const onSubmit = (e) => {
-        e.prevenDefualt()
+    const onChange = (q) => {
+
+        setTerm(q)
         getQuery(term)
     }
 
     return (
         <section>
-            <form onSubmit={onSubmit}>
+            <form>
                 <input
                     type="text"
-                    onChange={(e) => setTerm(e.target.value)}
+                    onChange={(e) => onChange(e.target.value)}
                     value={term}
                     required
                     placeholder='Søg...'
                     autoComplete='off' />
-                <button className="btn search">Søg</button>
             </form>
         </section>
     )
