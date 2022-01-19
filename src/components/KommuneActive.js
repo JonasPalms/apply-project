@@ -11,19 +11,19 @@ import { useState, useEffect } from 'react'
 import Search from './Searchbar/Search'
 import ListComponent from './ListComponent/ListComponent'
 
-export default function KommuneActive({ setInteractive }) {
 
+
+export default function KommuneActive({ setInteractive }) {
 
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [query, setQuery] = useState("")
+    const [url, setUrl] = useState("https://api.dataforsyningen.dk/kommuner")
 
     useEffect(() => {
         const fetchData = async () => {
 
-
-            const res = await fetch(
-                `https://api.dataforsyningen.dk/kommuner${query}`)
+            const res = await fetch(url + query)
             const result = await res.json()
 
             setItems(result)
@@ -31,13 +31,14 @@ export default function KommuneActive({ setInteractive }) {
         }
 
         fetchData()
-    }, [query])
+    }, [query, url])
 
     return (
         <div className='container active'>
             <header>
                 <h2>Danmarks Kommuner</h2>
-                <Search getQuery={(q) => setQuery(`/autocomplete?q=${q}`)} />
+                <Search
+                    getQuery={(q) => setQuery(`/autocomplete?q=${q}`)} />
             </header>
             {items && <ListComponent items={items} isLoading={isLoading} />}
             <button className='btn' onClick={() => setInteractive(false)}>Skjul</button>

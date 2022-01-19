@@ -11,6 +11,7 @@ export default function Search({ getQuery }) {
 
         setTerm(q)
         getQuery(q)
+
     }
 
     return (

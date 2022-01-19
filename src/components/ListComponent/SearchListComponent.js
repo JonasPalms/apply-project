@@ -13,10 +13,10 @@ export default function ListComponent({ items, isLoading }) {
                 </thead>
                 <tbody>
                     {items.map(kommune => (
-                        <tr key={kommune.dagi_id}>
-                            <td>{kommune.kode}</td>
-                            <td>{kommune.navn}</td>
-                            <td>{kommune.region.navn}</td>
+                        <tr key={kommune.kommune.dagi_id}>
+                            <td>{kommune.kommune.kode}</td>
+                            <td>{kommune.kommune.navn}</td>
+                            <td>{kommune.kommune.region.navn}</td>
                         </tr>
                     ))}
                 </tbody>
